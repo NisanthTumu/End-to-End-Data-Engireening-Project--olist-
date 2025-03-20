@@ -1,0 +1,51 @@
+Here’s a resume-friendly summary based on the contents of your document:  
+
+---
+
+### 🔹 Data Engineering Project: Otis Data  
+A hands-on project leveraging Microsoft Azure services to process and analyze an E-commerce dataset. Designed and implemented a Medallion Architecture for structured data processing and transformation.  
+
+#### Key Technologies & Tools:  
+- Azure Data Factory (ADF) – Orchestrated ETL pipelines for data ingestion  
+- Azure Data Lake Storage (ADLS) Gen2 – Managed scalable data storage  
+- Azure Databricks – Performed data transformation and analytics  
+- Azure Synapse Analytics – Integrated for big data querying and analysis  
+
+#### Key Contributions:  
+- Implemented a scalable data pipeline to handle raw, clean, and transformed data using Medallion Architecture (Bronze, Silver, Gold layers).  
+- Designed an optimized data lake structure using ADLS Gen2 for efficient storage and retrieval.  
+- Developed ETL workflows in Azure Data Factory to automate data ingestion.  
+- Utilized Databricks to clean, process, and analyze structured/unstructured data.  
+- Integrated Azure Synapse for enhanced reporting and analytics.  
+
+---
+
+This summary highlights your expertise in Azure-based data engineering, making it a strong addition to your resume and portfolio website. Let me know if you’d like any refinements! 🚀
+
+
+
+--------------------------------------------
+Based on your handwritten notes on Otis Data, here’s a resume and portfolio summary worth including:
+
+---
+
+### Resume Summary (Data Engineering Focus)
+Project: Otis Data Pipeline using Azure  
+- Designed and implemented an end-to-end E-commerce data pipeline using Azure Data Factory, ADLS Gen2, and Databricks.  
+- Developed a Medallion Architecture for structured data ingestion and transformation.  
+- Utilized Azure Synapse for data warehousing and analytics.  
+- Automated data ingestion workflows and optimized storage using Azure Data Lake.  
+- Integrated scalable ETL pipelines for real-time and batch processing.
+
+---
+
+### Portfolio Website Summary
+🚀 Otis Data Pipeline – Scalable E-commerce Data Processing  
+📌 Tech Stack: Azure Data Factory, Azure Data Lake Storage Gen2, Databricks, Synapse Analytics  
+📌 Key Highlights:  
+✔ Built an Azure-based data pipeline to ingest and process large-scale E-commerce data  
+✔ Implemented a Medallion Architecture (Bronze, Silver, Gold) for structured transformation  
+✔ Leveraged Azure Databricks for data cleaning and transformation  
+✔ Stored and queried optimized data using Azure Synapse Analytics  
+
+This demonstrates expertise in cloud-based data engineering, big data processing, and scalable ETL pipelines. Let me know if you need a more customized version! 🚀

@@ -1,0 +1,84 @@
+SELECT
+    TOP 100 *
+FROM
+    OPENROWSET(
+        BULK 'https://olistdatastorageactnis.dfs.core.windows.net/olistdata/Silver',
+        FORMAT = 'parquet'
+    ) AS [result]
+
+
+
+
+-- Creating View
+
+
+create schema gold
+
+create view gold.final 
+as 
+SELECT
+     *
+FROM
+    OPENROWSET(
+        BULK 'https://olistdatastorageactnis.dfs.core.windows.net/olistdata/Silver/',
+        FORMAT = 'PARQUET'
+    ) AS result1
+
+
+
+select * from gold.final
+
+
+
+create view gold.final2
+as 
+SELECT
+     *
+FROM
+    OPENROWSET(
+        BULK 'https://olistdatastorageactnis.dfs.core.windows.net/olistdata/Silver/',
+        FORMAT = 'PARQUET'
+    ) AS result1
+where order_status = 'delivered'
+
+select * from gold.final2
+
+
+
+
+
+-- Creating Username and password
+
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'd8TySvmWr4rPBUk';
+CREATE DATABASE SCOPED CREDENTIAL nisanthadmin WITH IDENTITY = 'Managed Identity';
+
+
+SELECT * from sys.database_credentials
+
+
+-- Creating CETAS
+
+CREATE EXTERNAL FILE FORMAT extfileformat WITH (
+    FORMAT_TYPE = PARQUET,
+    DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+);
+
+CREATE EXTERNAL DATA SOURCE goldlayer WITH (
+    LOCATION = 'https://olistdatastorageactnis.dfs.core.windows.net/olistdata/Gold/',
+    CREDENTIAL = nisanthadmin
+);
+
+
+CREATE EXTERNAL TABLE gold.finaltable WITH (
+        LOCATION = 'Serving',
+        DATA_SOURCE = goldlayer,
+        FILE_FORMAT = extfileformat
+) AS
+SELECT * FROM gold.final2;
+
+
+
+select * from gold.finaltable
+
+select * from gold.final2
+

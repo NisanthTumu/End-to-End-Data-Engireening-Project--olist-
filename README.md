@@ -2,6 +2,10 @@
 
 The objective of this project is to **design and implement a scalable, cloud-based data engineering pipeline** for an e-commerce platform using **Azure services**. The pipeline will enable **efficient data ingestion, transformation, enrichment** by integrating multiple data sources **(HTTP, SQL, MongoDB)**, ensuring data quality, and providing actionable insights through advanced analytics and visualization tools.
 
+**Architecture:**
+
+![Architecture Diagram](https://github.com/user-attachments/assets/931a0675-296e-4f75-9330-94311f1997d0)
+
 **✅ Key Goals:**
 •	Automate Data Ingestion: Seamlessly ingest data from diverse sources (HTTP, SQL, MongoDB) into ADLS Gen2 storage using Azure Data Factory.
 •	Implement Medallion Architecture: Organize and transform data through bronze, silver, and gold layers to improve data quality and accessibility.

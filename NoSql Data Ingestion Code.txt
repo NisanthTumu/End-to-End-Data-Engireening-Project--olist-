@@ -1,0 +1,16 @@
+# importing module
+from pymongo import MongoClient
+
+hostname = "38uxi.h.filess.io"
+database = "olistprojectNoSQL_adjective"
+port = "27018"
+username = "olistprojectNoSQL_adjective"
+password = "e046c3284d3fc6a4c24d8a71d41a0357fec9ab9b"
+
+uri = "mongodb://" + username + ":" + password + "@" + hostname + ":" + port + "/" + database
+
+# Connect with the portnumber and host
+client = MongoClient(uri)
+
+# Access database
+mydatabase = client[database]
